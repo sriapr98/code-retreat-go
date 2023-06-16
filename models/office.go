@@ -23,3 +23,29 @@ var (
 	SaoPaulo     = Office{11, "Sao Paulo", Brazil, Active}
 	Toronto      = Office{12, "Toronto", Canada, Closed}
 )
+
+var offices = []Office{
+	London,
+	SanFrancisco,
+	Dallas,
+	Melbourne,
+	Sydney,
+	Bangalore,
+	Chennai,
+	Coimbatore,
+	Noida,
+	Hamburg,
+	Beijing,
+	Wuhan,
+	SaoPaulo,
+	Toronto,
+}
+
+func GetOfficeByName(name string) Office {
+	for _, office := range offices {
+		if office.Name == name {
+			return office
+		}
+	}
+	return Office{}
+}

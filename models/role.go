@@ -18,3 +18,20 @@ var (
 	DataScientist      = Role{10, "Data Scientist"}
 	InfraConsultant    = Role{11, "Infra Consultant"}
 )
+
+var roles = []Role{
+	Developer, QualityAnalyst,
+	BusinessAnalyst, ProductManager,
+	ProjectManager, UiDeveloper,
+	ExperienceDesigner, MobileDeveloper,
+	DataEngineer, DataScientist,
+	InfraConsultant}
+
+func GetRoleByName(name string) Role {
+	for _, role := range roles {
+		if role.Name == name {
+			return role
+		}
+	}
+	return Role{}
+}

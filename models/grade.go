@@ -13,3 +13,21 @@ var (
 	PrincipalConsultant = Grade{5, "Principal Consultant"}
 	Director            = Grade{6, "Director"}
 )
+
+var grades = []Grade{
+	ConsultantGraduate,
+	Consultant,
+	SeniorConsultant,
+	LeadConsultant,
+	PrincipalConsultant,
+	Director,
+}
+
+func GetGradeByName(name string) Grade {
+	for _, grade := range grades {
+		if grade.Name == name {
+			return grade
+		}
+	}
+	return Grade{}
+}

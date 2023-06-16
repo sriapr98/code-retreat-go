@@ -26,3 +26,22 @@ var (
 	LeaveEncashment     = ExitCheckListItem{14, "Leave encashment", PeopleTeam, COUNTRY, 4}
 	Gratuity            = ExitCheckListItem{15, "Gratuity", PeopleTeam, COUNTRY, 4}
 )
+
+var exitCheckListItems = []ExitCheckListItem{
+	DeskKeys,
+	FileCabinetKeys,
+	AccessCard,
+	CellPhone,
+	SimCard,
+	LibraryBooks,
+	SezCard,
+	Laptop,
+	Monitors,
+	Charger,
+	RsaFob,
+	OutstandingExpenses,
+	SodexoReimbursement,
+	ExitSurvey,
+	LeaveEncashment,
+	Gratuity,
+}

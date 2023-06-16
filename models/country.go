@@ -17,3 +17,23 @@ var (
 	Brazil        = Country{7, "Brazil", "BRA", Active}
 	Canada        = Country{8, "Canada", "CAN", Closed}
 )
+
+var countries = []Country{
+	UnitedKingdom,
+	UnitedStates,
+	Australia,
+	India,
+	Germany,
+	China,
+	Brazil,
+	Canada,
+}
+
+func GetCountryByName(name string) Country {
+	for _, country := range countries {
+		if country.Name == name {
+			return country
+		}
+	}
+	return Country{}
+}
