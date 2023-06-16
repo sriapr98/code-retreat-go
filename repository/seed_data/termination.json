@@ -1,0 +1,44 @@
+{
+  "termination": [
+    {
+      "id": 1,
+      "employee_name": "Monika Panasyuk",
+      "last_working_date": "20-08-2023",
+      "reason": "NA",
+      "initiation_date": "16-06-2023",
+      "status": "SUBMITTED",
+      "exit_check_list_items": [
+        {
+          "exit_checklist_item_id": 1,
+          "is_completed": false,
+          "completion_date": ""
+        },
+        {
+          "exit_checklist_item_id": 2,
+          "is_completed": false,
+          "completion_date": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "employee_name": "Louane David",
+      "last_working_date": "21-08-2023",
+      "reason": "NA",
+      "initiation_date": "10-06-2023",
+      "status": "ACCEPTED",
+      "exit_check_list_items": [
+        {
+          "exit_checklist_item_id": 3,
+          "is_completed": false,
+          "completion_date": ""
+        },
+        {
+          "exit_checklist_item_id": 4,
+          "is_completed": true,
+          "completion_date": "15-06-2023"
+        }
+      ]
+    }
+  ]
+}

@@ -25,13 +25,20 @@ func initializeRoutes(router *gin.Engine) {
 	if err != nil {
 		panic(err)
 	}
+	terminationRepository := repository.NewTerminationRepository()
+	err = terminationRepository.LoadTerminationSeedData(employeeRepository)
+	if err != nil {
+		panic(err)
+	}
 
 	employeeService := service.NewEmployeeService(employeeRepository)
+	terminationService := service.NewTerminationService(terminationRepository)
 
 	pingPongController := controller.NewPingPongController()
 	employeeController := controller.NewEmployeeController(employeeService)
+	terminationController := controller.NewTerminationController(terminationService)
 
 	router.GET("/ping", pingPongController.Ping)
-	router.GET("/test", pingPongController.TestEmployeeResignations)
 	router.GET("/employees", employeeController.GetAllEmployees)
+	router.GET("/terminations", terminationController.GetAllTerminations)
 }

@@ -9,6 +9,7 @@ import (
 type EmployeeRepository interface {
 	LoadSeedData() error
 	GetAllEmployees() []models.Employee
+	GetEmployeeByName(name string) models.Employee
 }
 
 type EmployeesData struct {
@@ -24,6 +25,15 @@ type EmployeesData struct {
 
 type employeeRepository struct {
 	employeesData []models.Employee
+}
+
+func (e *employeeRepository) GetEmployeeByName(name string) models.Employee {
+	for _, employee := range e.employeesData {
+		if employee.Name == name {
+			return employee
+		}
+	}
+	return models.Employee{}
 }
 
 func (e *employeeRepository) GetAllEmployees() []models.Employee {
