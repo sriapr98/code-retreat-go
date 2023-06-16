@@ -1,11 +1,11 @@
 package models
 
 type Termination struct {
-	Id int
-	Employee Employee
+	Id              int
+	Employee        Employee
 	LastWorkingDate string
-	Reason string
-	InitiationDate string
-	Termination TerminationStatus
-	ExitChecklist []EmployeeExitChecklistItem
+	Reason          string
+	InitiationDate  string
+	Termination     TerminationStatus
+	ExitChecklist   []EmployeeExitChecklistItem
 }

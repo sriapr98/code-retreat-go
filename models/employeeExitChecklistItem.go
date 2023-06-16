@@ -1,8 +1,8 @@
 package models
 
 type EmployeeExitChecklistItem struct {
-	TerminationId  int
+	TerminationId       int
 	ExitChecklistItemID int
-	IsCompleted    bool
-	CompletionDate string
+	IsCompleted         bool
+	CompletionDate      string
 }
