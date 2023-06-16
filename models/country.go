@@ -3,6 +3,17 @@ package models
 type Country struct {
 	Id       int
 	Name     string
-	Status   Status
 	Iso3Code string
+	Status   Status
 }
+
+var (
+	UnitedKingdom = Country{1, "United Kingdom", "GBR", Active}
+	UnitedStates  = Country{2, "United States", "USA", Active}
+	Australia     = Country{3, "Australia", "AUS", Active}
+	India         = Country{4, "India", "IND", Active}
+	Germany       = Country{5, "Germany", "DEU", Active}
+	China         = Country{6, "China", "CHN", Active}
+	Brazil        = Country{7, "Brazil", "BRA", Active}
+	Canada        = Country{8, "Canada", "CAN", Closed}
+)

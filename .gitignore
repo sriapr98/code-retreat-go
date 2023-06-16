@@ -1,4 +1,5 @@
 .idea/
+.lh/
 *.iml
 code-retreat-go
 vendor
