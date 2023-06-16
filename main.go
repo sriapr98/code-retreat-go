@@ -2,8 +2,9 @@ package main
 
 import (
 	"code-retreat-go/controller"
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -20,4 +21,5 @@ func initializeRoutes(router *gin.Engine) {
 	pingPongController := controller.NewPingPongController()
 
 	router.GET("/ping", pingPongController.Ping)
+	router.GET("/test", pingPongController.TestEmployeeResignations)
 }
