@@ -1,8 +1,8 @@
 package models
 
 type Grade struct {
-	id   int
-	name string
+	Id   int
+	Name string
 }
 
 var (
